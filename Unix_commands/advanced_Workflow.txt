@@ -1,0 +1,81 @@
+krish@KRISHTUF-15 MINGW64 ~/my-project/BridgeLabz-Training-3Y (my-feature)
+$ mkdir advanced-project
+
+krish@KRISHTUF-15 MINGW64 ~/my-project/BridgeLabz-Training-3Y (my-feature)
+$ cd advanced-project
+
+krish@KRISHTUF-15 MINGW64 ~/my-project/BridgeLabz-Training-3Y/advanced-project (my-feature)
+$ git init
+Initialized empty Git repository in C:/Users/krish/my-project/BridgeLabz-Training-3Y/advanced-project/.git/
+
+krish@KRISHTUF-15 MINGW64 ~/my-project/BridgeLabz-Training-3Y/advanced-project (main)
+$ echo "file A" > a.txt
+
+krish@KRISHTUF-15 MINGW64 ~/my-project/BridgeLabz-Training-3Y/advanced-project (main)
+$ echo "file B" > b.txt
+
+krish@KRISHTUF-15 MINGW64 ~/my-project/BridgeLabz-Training-3Y/advanced-project (main)
+$ git add .
+warning: in the working copy of 'a.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'b.txt', LF will be replaced by CRLF the next time Git touches it
+
+krish@KRISHTUF-15 MINGW64 ~/my-project/BridgeLabz-Training-3Y/advanced-project (main)
+$ git commit -m "Initial commit with multiple files"
+[main (root-commit) 52ae17e] Initial commit with multiple files
+ 2 files changed, 2 insertions(+)
+ create mode 100644 a.txt
+ create mode 100644 b.txt
+
+krish@KRISHTUF-15 MINGW64 ~/my-project/BridgeLabz-Training-3Y/advanced-project (main)
+$ echo "*.log" > .gitignore
+
+krish@KRISHTUF-15 MINGW64 ~/my-project/BridgeLabz-Training-3Y/advanced-project (main)
+$ git add .gitignore
+warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it
+
+krish@KRISHTUF-15 MINGW64 ~/my-project/BridgeLabz-Training-3Y/advanced-project (main)
+$ git commit -m "A
+> ^C
+
+krish@KRISHTUF-15 MINGW64 ~/my-project/BridgeLabz-Training-3Y/advanced-project (main)
+$ git commit -m "Add .gitignore to ignore log files"
+[main 7a747ce] Add .gitignore to ignore log files
+ 1 file changed, 1 insertion(+)
+ create mode 100644 .gitignore
+
+krish@KRISHTUF-15 MINGW64 ~/my-project/BridgeLabz-Training-3Y/advanced-project (main)
+$ echo "Work in progress" > a.txt
+
+krish@KRISHTUF-15 MINGW64 ~/my-project/BridgeLabz-Training-3Y/advanced-project (main)
+$ git add a.txt
+warning: in the working copy of 'a.txt', LF will be replaced by CRLF the next time Git touches it
+
+krish@KRISHTUF-15 MINGW64 ~/my-project/BridgeLabz-Training-3Y/advanced-project (main)
+$ git stash
+Saved working directory and index state WIP on main: 7a747ce Add .gitignore to ignore log files
+
+krish@KRISHTUF-15 MINGW64 ~/my-project/BridgeLabz-Training-3Y/advanced-project (main)
+$ git stash pop
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   a.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped refs/stash@{0} (c2267f2bf8d73669babe1ac01e7998b99f01cf72)
+
+krish@KRISHTUF-15 MINGW64 ~/my-project/BridgeLabz-Training-3Y/advanced-project (main)
+$ git commit -am "Finalize changes for release"
+[main 3195975] Finalize changes for release
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+krish@KRISHTUF-15 MINGW64 ~/my-project/BridgeLabz-Training-3Y/advanced-project (main)
+$ git tag -a v1.0 -m "First release v1.0"
+
+krish@KRISHTUF-15 MINGW64 ~/my-project/BridgeLabz-Training-3Y/advanced-project (main)
+$ git remote add origin <https://github.com/Krish7941/Backend-Dev>
+bash: syntax error near unexpected token `newline'
+
+krish@KRISHTUF-15 MINGW64 ~/my-project/BridgeLabz-Training-3Y/advanced-project (main)
+$ git remote add origin https://github.com/Krish7941/Backend-Dev

@@ -1,0 +1,218 @@
+krish@KRISHTUF-15 MINGW64 ~/my-project (main)
+$ git checkout main
+Already on 'main'
+
+krish@KRISHTUF-15 MINGW64 ~/my-project (main)
+$ git checkout -b branchA
+Switched to a new branch 'branchA'
+
+krish@KRISHTUF-15 MINGW64 ~/my-project (branchA)
+$ git checkout main
+Switched to branch 'main'
+
+krish@KRISHTUF-15 MINGW64 ~/my-project (main)
+$ git chrckout -b branchB
+git: 'chrckout' is not a git command. See 'git --help'.
+
+The most similar command is
+        checkout
+
+krish@KRISHTUF-15 MINGW64 ~/my-project (main)
+$ git checkout -b branchB
+Switched to a new branch 'branchB'
+
+krish@KRISHTUF-15 MINGW64 ~/my-project (branchB)
+$ git chechout branchA
+git: 'chechout' is not a git command. See 'git --help'.
+
+The most similar command is
+        checkout
+
+krish@KRISHTUF-15 MINGW64 ~/my-project (branchB)
+$ git checkout branchA
+Switched to branch 'branchA'
+
+krish@KRISHTUF-15 MINGW64 ~/my-project (branchA)
+$ echo "Change from branchA" > conflict.txt
+
+krish@KRISHTUF-15 MINGW64 ~/my-project (branchA)
+$ git add conflict.txt
+warning: in the working copy of 'conflict.txt', LF will be replaced by CRLF the next time Git touches it
+
+krish@KRISHTUF-15 MINGW64 ~/my-project (branchA)
+$ git commit -m "BranchA change"
+[branchA 52c3f0e] BranchA change
+ 1 file changed, 1 insertion(+)
+ create mode 100644 conflict.txt
+krish@KRISHTUF-15 MINGW64 ~/my-project (branchA)
+$ git checkout branchB
+Switched to branch 'branchB'
+
+krish@KRISHTUF-15 MINGW64 ~/my-project (branchB)
+$ echo "Change from branchB" > conflict.txt
+
+krish@KRISHTUF-15 MINGW64 ~/my-project (branchB)
+$ git add conflict.txt
+warning: in the working copy of 'conflict.txt', LF will be replaced by CRLF the next time Git touches it
+commit cc82a30d305d2a180b36ed0b87a6473f0a58847b (HEAD -> main)
+Merge: 52c3f0e c6acea7
+Author: Krish Pathak <krishpathak79@gmail.com>
+Date:   Fri Jan 16 11:14:50 2026 +0530
+
+    Resolve merge conflict between branchA and branchB
+
+commit c6acea7e54e82c3672459135cf3e908b127dafe5 (branchB)
+Author: Krish Pathak <krishpathak79@gmail.com>
+Date:   Fri Jan 16 11:11:04 2026 +0530
+
+    BranchB change
+
+commit 52c3f0e6206cbc36b7956fd254392df444dbcf04 (branchA)
+Author: Krish Pathak <krishpathak79@gmail.com>
+Date:   Fri Jan 16 11:09:27 2026 +0530
+
+    BranchA change
+
+commit 5cbb8a7e055b3aa11d034be5b8fbf5b51c4bbdca
+Author: Krish Pathak <krishpathak79@gmail.com>
+Date:   Fri Jan 16 10:57:28 2026 +0530
+
+:...skipping...
+commit cc82a30d305d2a180b36ed0b87a6473f0a58847b (HEAD -> main)
+Merge: 52c3f0e c6acea7
+Author: Krish Pathak <krishpathak79@gmail.com>
+Date:   Fri Jan 16 11:14:50 2026 +0530
+
+    Resolve merge conflict between branchA and branchB
+
+commit c6acea7e54e82c3672459135cf3e908b127dafe5 (branchB)
+Author: Krish Pathak <krishpathak79@gmail.com>
+Date:   Fri Jan 16 11:11:04 2026 +0530
+
+    BranchB change
+
+commit 52c3f0e6206cbc36b7956fd254392df444dbcf04 (branchA)
+Author: Krish Pathak <krishpathak79@gmail.com>
+Date:   Fri Jan 16 11:09:27 2026 +0530
+
+    BranchA change
+commit 5cbb8a7e055b3aa11d034be5b8fbf5b51c4bbdca
+Author: Krish Pathak <krishpathak79@gmail.com>
+Date:   Fri Jan 16 10:57:28 2026 +0530
+
+:...skipping...
+commit cc82a30d305d2a180b36ed0b87a6473f0a58847b (HEAD -> main)
+Merge: 52c3f0e c6acea7
+Author: Krish Pathak <krishpathak79@gmail.com>
+Date:   Fri Jan 16 11:14:50 2026 +0530
+
+    Resolve merge conflict between branchA and branchB
+
+commit c6acea7e54e82c3672459135cf3e908b127dafe5 (branchB)
+Author: Krish Pathak <krishpathak79@gmail.com>
+Date:   Fri Jan 16 11:11:04 2026 +0530
+
+    BranchB change
+
+commit 52c3f0e6206cbc36b7956fd254392df444dbcf04 (branchA)
+Author: Krish Pathak <krishpathak79@gmail.com>
+Date:   Fri Jan 16 11:09:27 2026 +0530
+
+    BranchA change
+
+commit 5cbb8a7e055b3aa11d034be5b8fbf5b51c4bbdca
+Author: Krish Pathak <krishpathak79@gmail.com>
+Date:   Fri Jan 16 10:57:28 2026 +0530
+
+    Add feature file
+
+commit c8f8d7663f3c922b56ed7e6b74b363a7a67e3837
+Author: Krish Pathak <krishpathak79@gmail.com>
+Date:   Fri Jan 16 10:52:31 2026 +0530
+
+    Update README with new text
+
+commit fdfe2aabe3c7b40d2946ab9340d8a84bae1f829a
+Author: Krish Pathak <krishpathak79@gmail.com>
+Date:   Fri Jan 16 10:51:30 2026 +0530
+
+    Add initial README.md
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+(END)
+commit cc82a30d305d2a180b36ed0b87a6473f0a58847b (HEAD -> main)
+Merge: 52c3f0e c6acea7
+Author: Krish Pathak <krishpathak79@gmail.com>
+Date:   Fri Jan 16 11:14:50 2026 +0530
+
+    Resolve merge conflict between branchA and branchB
+
+commit c6acea7e54e82c3672459135cf3e908b127dafe5 (branchB)
+Author: Krish Pathak <krishpathak79@gmail.com>
+Date:   Fri Jan 16 11:11:04 2026 +0530
+
+    BranchB change
+
+commit 52c3f0e6206cbc36b7956fd254392df444dbcf04 (branchA)
+Author: Krish Pathak <krishpathak79@gmail.com>
+Date:   Fri Jan 16 11:09:27 2026 +0530
+
+    BranchA change
+
+commit 5cbb8a7e055b3aa11d034be5b8fbf5b51c4bbdca
+Author: Krish Pathak <krishpathak79@gmail.com>
+Date:   Fri Jan 16 10:57:28 2026 +0530
+
+    Add feature file
+
+commit c8f8d7663f3c922b56ed7e6b74b363a7a67e3837
+Author: Krish Pathak <krishpathak79@gmail.com>
+Date:   Fri Jan 16 10:52:31 2026 +0530
+
+    Update README with new text
+
+commit fdfe2aabe3c7b40d2946ab9340d8a84bae1f829a
+Author: Krish Pathak <krishpathak79@gmail.com>
+Date:   Fri Jan 16 10:51:30 2026 +0530
+
+    Add initial README.md
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~

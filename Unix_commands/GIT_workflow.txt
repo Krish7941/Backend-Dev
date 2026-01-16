@@ -1,0 +1,51 @@
+krish@KRISHTUF-15 MINGW64 ~ (main)
+$ mkdir my-project
+
+krish@KRISHTUF-15 MINGW64 ~ (main)
+$ cd my-project
+
+krish@KRISHTUF-15 MINGW64 ~/my-project (main)
+$ git init
+Initialized empty Git repository in C:/Users/krish/my-project/.git/
+
+krish@KRISHTUF-15 MINGW64 ~/my-project (main)
+$ echo "# My Project" > README.md
+
+krish@KRISHTUF-15 MINGW64 ~/my-project (main)
+$ git add README.md
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+
+krish@KRISHTUF-15 MINGW64 ~/my-project (main)
+$ git commit -m "Add initial README.md"
+[main (root-commit) fdfe2aa] Add initial README.md
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+
+krish@KRISHTUF-15 MINGW64 ~/my-project (main)
+$ echo "This is my first change" >> README.md
+
+krish@KRISHTUF-15 MINGW64 ~/my-project (main)
+$ git add README.md
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+
+krish@KRISHTUF-15 MINGW64 ~/my-project (main)
+$ git commit -m"Update README with new text"
+[main c8f8d76] Update README with new text
+ 1 file changed, 1 insertion(+)
+
+krish@KRISHTUF-15 MINGW64 ~/my-project (main)
+$ git log
+commit c8f8d7663f3c922b56ed7e6b74b363a7a67e3837 (HEAD -> main)
+Author: Krish Pathak <krishpathak79@gmail.com>
+Date:   Fri Jan 16 10:52:31 2026 +0530
+
+    Update README with new text
+
+commit fdfe2aabe3c7b40d2946ab9340d8a84bae1f829a
+Author: Krish Pathak <krishpathak79@gmail.com>
+Date:   Fri Jan 16 10:51:30 2026 +0530
+
+    Add initial README.md
+
+krish@KRISHTUF-15 MINGW64 ~/my-project (main)
+$

@@ -1,0 +1,55 @@
+krish@KRISHTUF-15 MINGW64 ~/my-project (main)
+$ git checkout -b feature
+Switched to a new branch 'feature'
+
+krish@KRISHTUF-15 MINGW64 ~/my-project (feature)
+$ echo "Feature work" > feature.txt
+
+krish@KRISHTUF-15 MINGW64 ~/my-project (feature)
+$ git add feature.txt
+warning: in the working copy of 'feature.txt', LF will be replaced by CRLF the next time Git touches it
+
+krish@KRISHTUF-15 MINGW64 ~/my-project (feature)
+$ git commit -m "Add feature file"
+[feature 5cbb8a7] Add feature file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 feature.txt
+
+krish@KRISHTUF-15 MINGW64 ~/my-project (feature)
+$ git checkout main
+Switched to branch 'main'
+
+krish@KRISHTUF-15 MINGW64 ~/my-project (main)
+$ git merge feature
+Updating c8f8d76..5cbb8a7
+Fast-forward
+ feature.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 feature.txt
+
+krish@KRISHTUF-15 MINGW64 ~/my-project (main)
+$ git branch -d feature
+Deleted branch feature (was 5cbb8a7).
+
+krish@KRISHTUF-15 MINGW64 ~/my-project (main)
+$ git log
+commit 5cbb8a7e055b3aa11d034be5b8fbf5b51c4bbdca (HEAD -> main)
+Author: Krish Pathak <krishpathak79@gmail.com>
+Date:   Fri Jan 16 10:57:28 2026 +0530
+
+    Add feature file
+
+commit c8f8d7663f3c922b56ed7e6b74b363a7a67e3837
+Author: Krish Pathak <krishpathak79@gmail.com>
+Date:   Fri Jan 16 10:52:31 2026 +0530
+
+    Update README with new text
+
+commit fdfe2aabe3c7b40d2946ab9340d8a84bae1f829a
+Author: Krish Pathak <krishpathak79@gmail.com>
+Date:   Fri Jan 16 10:51:30 2026 +0530
+
+    Add initial README.md
+
+krish@KRISHTUF-15 MINGW64 ~/my-project (main)
+$
